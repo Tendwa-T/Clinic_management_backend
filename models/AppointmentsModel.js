@@ -8,3 +8,5 @@ const appointmentSchema = new mongoose.Schema({
     appointmentReason: { type: String, required: true },
     appointmentStatus: { type: String, required: true, default: 'pending' },
 });
+
+module.exports = mongoose.model('Appointment', appointmentSchema);

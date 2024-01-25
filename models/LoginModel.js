@@ -6,3 +6,5 @@ const loginSchema = new mongoose.Schema({
     role: { type: String, required: true },
     isActive: { type: Boolean, required: true, default: true },
 });
+
+module.exports = mongoose.model('Login', loginSchema);
