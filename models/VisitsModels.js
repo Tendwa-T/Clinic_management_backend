@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const visitSchema = new mongoose.Schema({
-    patient: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient', required: true },
-    doctor: { type: mongoose.Schema.Types.ObjectId, ref: 'Doctor', required: true },
+    patientID: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient', required: true },
+    doctorID: { type: mongoose.Schema.Types.ObjectId, ref: 'Doctor', required: true },
     date: { type: Date, required: true, default: Date.now() },
     timeIn: { type: Date, required: true, default: Date.now().toLocaleString() },
     triage_notes: { type: String, required: true, default: 'No notes' },

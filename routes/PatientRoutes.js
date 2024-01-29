@@ -8,6 +8,7 @@ const {
     updatePatientByNationalID,
     deletePatientByNationalID,
 } = require('../controllers/PatientController');
+const { validateLogin } = require('../controllers/LoginController');
 
 router.post('/register', registerPatient);
 router.get('/', getPatients);
